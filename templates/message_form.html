@@ -13,19 +13,19 @@
     </h1>
     <label>
         <span>姓名 :</span>
-        <input id="name" type="text" name="name" class="error" placeholder="请输入您的姓名"/>
+        <input id="name" type="text" value="{{ my_message.name }}" name="name" class="error" placeholder="请输入您的姓名"/>
         <div class="error-msg"></div>
     </label>
 
     <label>
         <span>邮箱 :</span>
-        <input id="email" type="email" value="" name="email" placeholder="请输入邮箱地址"/>
+        <input id="email" type="email" value="{{ my_message.email }}" name="email" placeholder="请输入邮箱地址"/>
         <div class="error-msg"></div>
     </label>
 
     <label>
         <span>联系地址 :</span>
-        <input id="address" type="text" value="" name="address" placeholder="请输入联系地址"/>
+        <input id="address" type="text" value="{{ my_message.address }}" name="address" placeholder="请输入联系地址"/>
         <div class="error-msg"></div>
     </label>
 
@@ -39,7 +39,7 @@
         <span>&nbsp;</span>
         <input type="submit" class="button" value="提交"/>
     </label>
-    <input type='hidden' name='csrfmiddlewaretoken' value='SfHkbL4feo1G00sJQtbO7TtLN4c2BUwa' />
+    {% csrf_token %}
 </form>
 
 </body>
