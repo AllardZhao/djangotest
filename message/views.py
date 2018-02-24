@@ -13,5 +13,5 @@ def getform(request):
         message = all_messages[0]
 
     return render(request, 'message_form.html', {
-        "my_message":message
+        "my_message": message
     })
